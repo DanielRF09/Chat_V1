@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ondrop="return false" ondrag="return false" onpaste="return false" oncontextmenu="return false">
+  <head>
+    <meta charset="utf-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+  <body>
+    
+
+    <div class="main-container">
+
+      <span class="text-center">CHAT</span>
+      <div class="login-container">
+        
+        <input type="text" class="input-login" id="username" required />
+        <label>Nombre de Usuario</label>
+        <button type="button" class="login-button" onclick="joinChat()">Ingresar</button>
+      </div>
+    </div>
+    
+    <script>
+    function joinChat() {
+      var username = document.querySelector('#username').value;
+      if (username.length <= 0) {
+        alert('El nombre de usuario es requerido.');
+      } else {
+        window.location = '/chat/' + username;
+      }
+    }
+    </script>
+  </body>
+</html>
